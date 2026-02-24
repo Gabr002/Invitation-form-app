@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors brand */
+  --brand-light: #59b2ff;
+  --brand-mid: #3487cf;
+  --brand-dark: #1d6fb6;
+
+  /* Accent Colors */
+  --color-purple: #b259ff;
+  --color-fuchsia: #ff59f9;
+  --color-pink: #ff598b;
+  --color-orange: #ff8b59;
+  --color-yellow: #ffcd59;
+  --color-lime: #e1ff59;
+  --color-green: #59ff91;
+  --color-cyan: #59fff9;
+  --color-navy: #6a59ff;
+
+  /* For feedback */
+  --color-danger: #ff5959;
+
+  /* Input */
+  --input-base: #1c1f21;
+  --input-stroke: #363b40;
+  --input-placeholder: #869198;
+
+  /* Shape */
+  --shape-background: #131516;
+  --shape-body: #212427;
+  --shape-button: #2d3136;
+  --shape-hover: #383d42;
+
+  /* for text */
+  --text-body: #c8cdd0;
+  --text-heading: #f9f9f9;
+}
