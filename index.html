@@ -1,9 +1,103 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invitation Form</title>
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <div id="app">
+      <aside>
+        <span class="img-cone"></span>
+        <span class="img-name-pare"></span>
+        <p>Crie um convite digital para o seu evento</p>
+      </aside>
+
+      <main>
+        <div class="main-container">
+          <h1>Crie seu evento</h1>
+
+          <form action="" method="post" enctype="multipart/form-data">
+            <!-- action="" method="post" enctype="multipart/form-data" quer dizer que o formulário enviará dados binários (como arquivos) para o próprio servidor via uma requisição POST
+           -->
+            <fieldset>
+              <div class="legend-container">
+                <span class="calendar"></span>
+                <legend>Sobre o evento</legend>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="title">Título</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Nome do evento"
+                />
+              </div>
+
+              <div class="flex">
+                <div class="input-wrapper">
+                  <label>Data inicial</label>
+                  <input
+                    type="date"
+                    id="initial-date"
+                    name="initial-date"
+                    lang="pt-br"
+                  />
+                </div>
+
+                <div class="input-wrapper">
+                  <label>Data final</label>
+                  <input
+                    type="date"
+                    id="final-date"
+                    name="final-date"
+                    lang="pt-br"
+                  />
+                </div>
+
+                <div class="input-wrapper">
+                  <label>Tipo</label>
+                  <select name="" id=""></select>
+                </div>
+
+                <div class="input-wrapper">
+                  <label>Local</label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Link ou endereço"
+                  />
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Descrição</label>
+                <textarea name="" id=""></textarea>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
