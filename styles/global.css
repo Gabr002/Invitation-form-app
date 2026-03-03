@@ -38,4 +38,15 @@
   /* for text */
   --text-body: #c8cdd0;
   --text-heading: #f9f9f9;
+
+  /* fonts */
+  --font-family-lo: "Leckerli One", cursive;
+  --text-logo: 400 2.5rem/normal var(--font-family-lo);
+  --font-family-b2: "Baloo 2", sans-serif;
+  --heading-md: 700 1.75rem/normal var(--font-family-b2);
+  --heading-sm: 700 1.125rem/normal var(--font-family-b2);
+  --font-family: "Open Sans", sans-serif;
+  --body-md-semibold: 300 1rem/normal var(--font-family);
+  --body-sm-semibold: 600 0.875rem/normal var(--font-family);
+  --body-xs-semibold: 600 0.75rem/normal var(--font-family);
 }

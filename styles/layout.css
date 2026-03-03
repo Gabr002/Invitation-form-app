@@ -1,0 +1,75 @@
+#app {
+  display: grid;
+  grid-template-columns: 32.79% 67.21%;
+
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  background-color: var(--shape-body);
+  overflow: auto;
+  padding: 5rem;
+  /* padding: 5rem auto; */ /* Padding não aceita auto porque ele é aplicado apenas ao conteúdo interno, não ao posicionamento do elemento
+   */
+  & .main-container {
+    max-width: 35rem;
+    margin: auto;
+  }
+
+  & h1 {
+    font: var(--heading-md);
+    color: var(--text-heading);
+    margin-bottom: 0.5rem;
+  }
+
+  & .legend-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    & span {
+      background-image: url(../assets/icons/calendar.svg);
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: cover;
+      background-position: center;
+    }
+
+    & legend {
+      font: var(--heading-sm);
+      color: var(--text-heading);
+    }
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  background-image: url(../assets/Brand.svg);
+  background-size: cover;
+  background-position: center;
+
+  padding: 2rem;
+
+  & .img-cone {
+    background-image: url(../assets/Logo.svg);
+    width: 2.81rem;
+    height: 2.81rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  & .img-name-pare {
+    background-image: url(../assets/Festivite.svg);
+    width: 8.9rem;
+    height: 2rem;
+  }
+
+  & p {
+    font: var(--body-md-semibold);
+    color: var(--text-heading);
+  }
+}
