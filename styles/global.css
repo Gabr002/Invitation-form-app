@@ -47,6 +47,12 @@
   --heading-sm: 700 1.125rem/normal var(--font-family-b2);
   --font-family: "Open Sans", sans-serif;
   --body-md-semibold: 300 1rem/normal var(--font-family);
-  --body-sm-semibold: 600 0.875rem/normal var(--font-family);
+  --body-sm-semibold: 300 0.875rem/normal var(--font-family);
   --body-xs-semibold: 600 0.75rem/normal var(--font-family);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
