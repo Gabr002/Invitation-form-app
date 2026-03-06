@@ -6,9 +6,14 @@ select {
   border-radius: 0.5rem;
   border: 2px solid transparent;
   outline: 1px solid var(--input-stroke);
+  background-color: var(--input-base);
 
   padding: 0.8125rem 1rem;
   font: var(--body-md-semibold);
+
+  &::placeholder {
+    color: var(--input-placeholder);
+  }
 }
 
 label {
@@ -17,4 +22,103 @@ label {
 
   display: block;
   margin-bottom: 0.75rem;
+}
+
+input[type="datetime-local"] {
+  color: var(--input-placeholder);
+  position: relative;
+
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+.event-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid var(--input-stroke);
+  border-radius: 0.5rem;
+  background-color: var(--input-base);
+  position: relative;
+
+  & input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  & label {
+    margin: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.625rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: var(--text-body);
+    font: var(--body-sm-semibold);
+    transition: color 220ms ease;
+  }
+
+  & input[type="radio"]:focus-visible + label {
+    outline: 1px solid var(--input-stroke);
+    border-radius: 0.5rem;
+  }
+
+  & input[type="radio"]:checked + label {
+    color: var(--text-heading);
+    font: 600 0.875rem/normal var(--font-family);
+  }
+
+  &:has(#online:checked)::before {
+    transform: translateX(100%);
+  }
+
+  &::before {
+    transition: transform 220ms ease;
+    content: "";
+    position: absolute;
+    background-color: var(--shape-button);
+    width: calc(50% - 0.25rem);
+    height: calc(100% - 0.5rem);
+    left: 0.25rem;
+    top: 0.25rem;
+    border-radius: 0.5rem;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  & .presencial span,
+  & .online span {
+    width: 1rem;
+    height: 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .presencial:has(input:checked) span {
+    background-image: url(../../assets/icons/predioblue.svg);
+  }
+
+  .online:has(input:checked) span {
+    background-image: url(../../assets/icons/videoblue.svg);
+  }
+
+  & .presencial span {
+    background-image: url(../../assets/icons/predio.svg);
+  }
+
+  & .online span {
+    background-image: url(../../assets/icons/video.svg);
+  }
 }

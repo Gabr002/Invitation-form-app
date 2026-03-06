@@ -53,11 +53,11 @@
                 />
               </div>
 
-              <div class="flex">
+              <div class="grid">
                 <div class="input-wrapper">
                   <label>Data inicial</label>
                   <input
-                    type="date"
+                    type="datetime-local"
                     id="initial-date"
                     name="initial-date"
                     lang="pt-br"
@@ -67,16 +67,39 @@
                 <div class="input-wrapper">
                   <label>Data final</label>
                   <input
-                    type="date"
+                    type="datetime-local"
                     id="final-date"
                     name="final-date"
                     lang="pt-br"
                   />
                 </div>
-
                 <div class="input-wrapper">
                   <label>Tipo</label>
-                  <select name="" id=""></select>
+                  <div class="event-type">
+                    <div class="presencial">
+                      <span></span>
+                      <input
+                        type="radio"
+                        id="presencial"
+                        name="type"
+                        value="presencial"
+                        checked
+                      />
+
+                      <label for="presencial">Presencial</label>
+                    </div>
+
+                    <div class="online">
+                      <span></span>
+                      <input
+                        type="radio"
+                        id="online"
+                        name="type"
+                        value="online"
+                      />
+                      <label for="online">Online</label>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="input-wrapper">
