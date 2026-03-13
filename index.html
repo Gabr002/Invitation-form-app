@@ -55,22 +55,22 @@
 
               <div class="grid">
                 <div class="input-wrapper">
-                  <label>Data inicial</label>
+                  <label for="initial-date">Data inicial</label>
                   <input
-                    type="datetime-local"
+                    type="text"
                     id="initial-date"
                     name="initial-date"
-                    lang="pt-br"
+                    placeholder="DD/MM/AAAA, --:--"
                   />
                 </div>
 
                 <div class="input-wrapper">
-                  <label>Data final</label>
+                  <label for="final-date">Data final</label>
                   <input
-                    type="datetime-local"
+                    type="text"
                     id="final-date"
                     name="final-date"
-                    lang="pt-br"
+                    placeholder="DD/MM/AAAA, --:--"
                   />
                 </div>
                 <div class="input-wrapper">
@@ -114,8 +114,191 @@
               </div>
 
               <div class="input-wrapper">
-                <label>Descrição</label>
-                <textarea name="" id=""></textarea>
+                <label for="description-invite">Descrição</label>
+                <textarea
+                  name="description-invite"
+                  id="description-invite"
+                  cols="30"
+                  rows="5"
+                  placeholder="Escreva sobre os detalhes do evento"
+                ></textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="personalization">
+              <div class="legend-container">
+                <span class="pincelsvg"></span>
+                <legend>Personalização</legend>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Cor principal</label>
+                <div
+                  class="radio-wrapper"
+                  role="group"
+                  aria-labelledby="primary-color-label"
+                >
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--brand-light)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-1"
+                      name="colors[]"
+                      value="brand-light"
+                      aria-label="brand light"
+                    />
+                    <label for="color-1"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-navy)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-2"
+                      name="colors[]"
+                      value="navy"
+                      aria-label="navy"
+                    />
+                    <label for="color-2"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-purple)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-3"
+                      name="colors[]"
+                      value="purple"
+                      aria-label="purple"
+                    />
+                    <label for="color-3"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-fuchsia)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-4"
+                      name="colors[]"
+                      value="fuchsia"
+                      aria-label="fuchsia"
+                    />
+                    <label for="color-4"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-pink)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-5"
+                      name="colors[]"
+                      value="pink"
+                      aria-label="pink"
+                    />
+                    <label for="color-5"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-danger)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-6"
+                      name="colors[]"
+                      value="danger"
+                      aria-label="danger"
+                    />
+                    <label for="color-6"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-orange)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-7"
+                      name="colors[]"
+                      value="orange"
+                      aria-label="orange"
+                    />
+                    <label for="color-7"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-yellow)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-8"
+                      name="colors[]"
+                      value="yellow"
+                      aria-label="yellow"
+                    />
+                    <label for="color-8"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-lime)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-9"
+                      name="colors[]"
+                      value="lime"
+                      aria-label="lime"
+                    />
+                    <label for="color-9"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-green)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-10"
+                      name="colors[]"
+                      value="green"
+                      aria-label="green"
+                    />
+                    <label for="color-10"></label>
+                  </div>
+
+                  <div
+                    class="radio-inner"
+                    style="background-color: var(--color-cyan)"
+                  >
+                    <input
+                      type="checkbox"
+                      id="color-11"
+                      name="colors[]"
+                      value="cyan"
+                      aria-label="cyan"
+                    />
+                    <label for="color-11"></label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-wrapper">
+                <label>Tema do evento</label>
+                <div class="grid">
+                  <div>img</div>
+                </div>
               </div>
             </fieldset>
           </form>

@@ -7,6 +7,7 @@ select {
   border: 2px solid transparent;
   outline: 1px solid var(--input-stroke);
   background-color: var(--input-base);
+  resize: none;
 
   padding: 0.8125rem 1rem;
   font: var(--body-md-semibold);
@@ -19,6 +20,14 @@ select {
 label {
   font: var(--body-sm-semibold);
   color: var(--text-body);
+
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.personalization label {
+  font: var(--body-sm-semibold);
+  color: #ffffff;
 
   display: block;
   margin-bottom: 0.75rem;
