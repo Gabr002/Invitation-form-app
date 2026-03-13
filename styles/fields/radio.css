@@ -1,0 +1,39 @@
+span + .radio-wrapper {
+  margin-top: 0.75rem;
+}
+
+.radio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(11, 2.5rem);
+  gap: 1rem;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-inner {
+  margin-top: 0.75rem;
+  content: "";
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  /* background-color: var(--brand-light); */
+  border: 0.375rem solid transparent;
+  box-shadow: 0 0 0 6px var(--shape-button);
+
+  &:hover {
+    box-shadow: 0 0 0 6px var(--shape-hover);
+  }
+
+  &:has(input:checked) {
+    box-shadow:
+      0 0 0 4px var(--shape-button),
+      0 0 0 6px var(--brand-light);
+  }
+
+  & + input[value="brand-light"] {
+    background-color: var(--brand-light);
+  }
+}
