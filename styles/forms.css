@@ -15,3 +15,7 @@ legend {
   font: var(--body-sm-semibold);
   color: var(--text-body);
 }
+
+fieldset + fieldset {
+  margin-top: 3rem;
+}

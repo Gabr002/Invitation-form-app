@@ -36,6 +36,14 @@ main {
       background-position: center;
     }
 
+    & .pincelsvg {
+      background-image: url(../assets/icons/paintbrush-vertical.svg);
+      width: 1.5rem;
+      height: 1.5rem;
+      background-size: cover;
+      background-position: center;
+    }
+
     & legend {
       font: var(--heading-sm);
       color: var(--text-heading);
