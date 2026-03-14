@@ -1,0 +1,40 @@
+.event-theme {
+  width: 8.375rem;
+  height: 6.48rem;
+  background-color: var(--shape-button);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  border: 2px solid transparent;
+
+  & span {
+    font: var(--body-sm-semibold);
+    color: var(--text-heading);
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: var(--shape-hover);
+  }
+
+  &:has(input:checked) {
+    box-shadow: 0 0 0 2px var(--brand-light);
+  }
+
+  & input[type="checkbox"] {
+    display: none;
+  }
+}
+
+.grid-event-theme {
+  display: grid;
+  grid-template-columns: repeat(4, 8.375rem);
+  gap: 1rem;
+}
