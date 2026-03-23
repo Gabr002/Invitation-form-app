@@ -1,4 +1,4 @@
-input,
+input:not([type="file"]),
 textarea,
 select {
   appearance: none;
@@ -11,9 +11,41 @@ select {
 
   padding: 0.8125rem 1rem;
   font: var(--body-md-semibold);
+  color: var(--text-heading);
 
   &::placeholder {
     color: var(--input-placeholder);
+  }
+
+  &:focus {
+    outline: 1px solid var(--brand-light);
+
+    &:invalid {
+      border: 1px solid transparent;
+    }
+  }
+
+  &:not(:focus):not([disabled]):invalid + .error {
+    display: none;
+  }
+
+  &:invalid {
+    border: 1px solid var(--color-danger);
+  }
+
+  &[required] + .error {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+
+    font: var(--body-sm-semibold);
+    color: var(--color-danger);
+
+    margin-top: 0.25rem;
+  }
+
+  &:valid + .error {
+    display: none;
   }
 }
 
@@ -129,5 +161,135 @@ input[type="datetime-local"] {
 
   & .online span {
     background-image: url(../../assets/icons/video.svg);
+  }
+}
+
+.flex-theme {
+  display: flex;
+  flex-wrap: wrap;
+  width: 11rem;
+  gap: 0.75rem;
+  align-items: center;
+
+  & span {
+    font: var(--body-sm-semibold);
+    color: var(--text-heading);
+  }
+
+  & .escuro,
+  & .claro {
+    transition:
+      opacity 440ms ease,
+      transform 440ms ease;
+  }
+
+  &:has(#claro:checked) {
+    & .escuro {
+      transform: translateX(0);
+      position: absolute;
+    }
+  }
+
+  &:has(#escuro:checked) {
+    & .claro {
+      transform: translateX(0);
+      position: absolute;
+    }
+  }
+}
+
+.switch-theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 999px;
+  transition: 400ms ease;
+  background-color: var(--input-base);
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--input-stroke);
+
+  & input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  & label {
+    cursor: pointer;
+    height: 100%;
+  }
+
+  &:has(#claro:checked)::before {
+    transition: 400ms ease;
+    transform: translateX(2rem);
+  }
+
+  &::before {
+    transition: transform 400ms ease;
+    content: "";
+    position: absolute;
+    background-color: var(--input-stroke);
+    width: 1.5rem;
+    height: 1.5rem;
+    left: 0.25rem;
+    top: 0.2rem;
+    border-radius: 50%;
+  }
+
+  &:has(#claro:checked) {
+    transition: 400ms ease;
+    background-color: var(--brand-light);
+    &::before {
+      transition: 400ms ease;
+      background-color: var(--text-heading);
+    }
+  }
+}
+
+.div-box {
+  width: 23rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .input-style {
+    min-width: 7.5rem;
+    height: 2.5rem;
+    background-color: var(--shape-button);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    cursor: pointer;
+
+    span {
+      background-image: url(../../assets/icons/upload.svg);
+      background-size: cover;
+      background-position: center;
+      width: 1rem;
+      height: 1rem;
+    }
+
+    p {
+      font: var(--body-sm-semibold);
+      color: var(--text-heading);
+    }
+  }
+}
+
+.input-file {
+  input[type="file"] {
+    all: unset;
+    font: var(--body-md-semibold);
+    color: var(--input-placeholder);
+    margin-bottom: 10px;
+    &::file-selector-button {
+      display: none;
+    }
   }
 }

@@ -6,7 +6,7 @@ form {
 
 fieldset {
   border: none;
-
+  max-width: 35rem;
   display: grid;
   gap: 1rem;
 }
@@ -18,4 +18,10 @@ legend {
 
 fieldset + fieldset {
   margin-top: 3rem;
+}
+
+hr {
+  border-color: var(--input-stroke);
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }

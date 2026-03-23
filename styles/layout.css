@@ -44,6 +44,14 @@ main {
       background-position: center;
     }
 
+    & .contact {
+      background-image: url(../assets/icons/contact.svg);
+      width: 1.5rem;
+      height: 1.5rem;
+      /* background-size: cover; */
+      /* background-position: center; */
+    }
+
     & legend {
       font: var(--heading-sm);
       color: var(--text-heading);

@@ -50,7 +50,15 @@
                   id="title"
                   name="title"
                   placeholder="Nome do evento"
+                  required
                 />
+                <div class="error">
+                  <img
+                    src="assets/icons/alert-circle.svg"
+                    alt="ícone de alerta vermelho"
+                  />
+                  <span>Campo obrigatório</span>
+                </div>
               </div>
 
               <div class="grid">
@@ -61,7 +69,15 @@
                     id="initial-date"
                     name="initial-date"
                     placeholder="DD/MM/AAAA, --:--"
+                    required
                   />
+                  <div class="error">
+                    <img
+                      src="assets/icons/alert-circle.svg"
+                      alt="ícone de alerta vermelho"
+                    />
+                    <span>Campo obrigatório</span>
+                  </div>
                 </div>
 
                 <div class="input-wrapper">
@@ -71,8 +87,17 @@
                     id="final-date"
                     name="final-date"
                     placeholder="DD/MM/AAAA, --:--"
+                    required
                   />
+                  <div class="error">
+                    <img
+                      src="assets/icons/alert-circle.svg"
+                      alt="ícone de alerta vermelho"
+                    />
+                    <span>Campo obrigatório</span>
+                  </div>
                 </div>
+
                 <div class="input-wrapper">
                   <label>Tipo</label>
                   <div class="event-type">
@@ -109,7 +134,15 @@
                     id="location"
                     name="location"
                     placeholder="Link ou endereço"
+                    required
                   />
+                  <div class="error">
+                    <img
+                      src="assets/icons/alert-circle.svg"
+                      alt="ícone de alerta vermelho"
+                    />
+                    <span>Campo obrigatório</span>
+                  </div>
                 </div>
               </div>
 
@@ -121,7 +154,15 @@
                   cols="30"
                   rows="5"
                   placeholder="Escreva sobre os detalhes do evento"
+                  required
                 ></textarea>
+                <div class="error">
+                  <img
+                    src="assets/icons/alert-circle.svg"
+                    alt="ícone de alerta vermelho"
+                  />
+                  <span>Campo obrigatório</span>
+                </div>
               </div>
             </fieldset>
 
@@ -431,7 +472,171 @@
                   </label>
                 </div>
               </div>
+
+              <div class="flex">
+                <div>
+                  <label>Estilo</label>
+                  <div class="flex-theme">
+                    <div class="switch-theme">
+                      <label for="escuro">
+                        <input
+                          type="radio"
+                          id="escuro"
+                          name="theme-style"
+                          value="presencial"
+                          checked
+                        />
+                      </label>
+
+                      <label for="claro">
+                        <input
+                          type="radio"
+                          id="claro"
+                          name="theme-style"
+                          value="claro"
+                        />
+                      </label>
+                    </div>
+                    <span class="escuro">Escuro</span>
+                    <span class="claro">Claro</span>
+                  </div>
+                </div>
+
+                <div class="input-file">
+                  <label for="image">Foto de capa</label>
+                  <div class="div-box">
+                    <label for="image" class="input-style">
+                      <span></span>
+                      <p>Selecionar</p>
+                    </label>
+                    <input
+                      type="file"
+                      id="image"
+                      name="image"
+                      accept="image/*"
+                      class="input-image"
+                    />
+                  </div>
+                </div>
+              </div>
             </fieldset>
+
+            <fieldset>
+              <div class="legend-container">
+                <span class="contact"></span>
+                <legend>Dados para contato</legend>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="fullname">Nome</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="Nome Completo"
+                  required
+                />
+                <div class="error">
+                  <img
+                    src="assets/icons/alert-circle.svg"
+                    alt="ícone de alerta vermelho"
+                  />
+                  <span>Campo obrigatório</span>
+                </div>
+              </div>
+
+              <div class="grid">
+                <div class="input-wrapper">
+                  <label for="email">E-mail</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="exemplo@email.com"
+                    required
+                  />
+                  <div class="error">
+                    <img
+                      src="assets/icons/alert-circle.svg"
+                      alt="ícone de alerta vermelho"
+                    />
+                    <span>Campo obrigatório</span>
+                  </div>
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="phone">Telefone</label>
+                  <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    placeholder="(99) 99999-9999"
+                    required
+                  />
+                  <div class="error">
+                    <img
+                      src="assets/icons/alert-circle.svg"
+                      alt="ícone de alerta vermelho"
+                    />
+                    <span>Campo obrigatório</span>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <hr />
+
+            <footer>
+              <div>
+                <label for="term-op1">
+                  <span></span>
+                  <p>
+                    Li e concordo com os <strong>Termos e Condições</strong> e
+                    com a
+                    <strong>Política de Privacidade</strong>
+                  </p>
+                </label>
+                <input
+                  type="checkbox"
+                  id="term-op1"
+                  name="terms"
+                  value="terms1"
+                />
+              </div>
+
+              <div>
+                <label for="term-op2">
+                  <span></span>
+                  <p>Aceito receber atualizações e promoções por e-mail</p>
+                </label>
+                <input
+                  type="checkbox"
+                  id="term-op2"
+                  name="terms"
+                  value="terms2"
+                />
+              </div>
+
+              <div>
+                <label for="term-op3">
+                  <span></span>
+                  <p>Aceito receber atualizações e promoções por SMS</p>
+                </label>
+                <input
+                  type="checkbox"
+                  id="term-op3"
+                  name="terms"
+                  value="terms3"
+                />
+              </div>
+
+              <div class="button-invite">
+                <button>
+                  <span></span>
+                  <p>Gerar convite</p>
+                </button>
+              </div>
+            </footer>
           </form>
         </div>
       </main>
