@@ -11,13 +11,13 @@
   gap: 0.5rem;
   padding: 0.25rem;
   border: 2px solid transparent;
+  cursor: pointer;
 
   & span {
     font: var(--body-sm-semibold);
     color: var(--text-heading);
     display: block;
     width: 100%;
-    cursor: pointer;
   }
 
   &:hover {
